@@ -4,7 +4,7 @@
 
 ## You can specify the input and the output in cmd, or you can use the default names:
 
-		Usage: main.py [options]
+		Usage: SimpleMailValidator.py [options]
 
 		Options:
   		-h, --help            show this help message and exit
