@@ -1,0 +1,32 @@
+## Packages needed:
+	- validate_email .. you can install it using "pip install validate_email"
+	- pydns          ..                          "pip install pydns"
+
+## You can specify the input and the output in cmd, or you can use the default names:
+
+		Usage: main.py [options]
+
+		Options:
+  		-h, --help            show this help message and exit
+		-i FILE, --infile=FILE
+                	         Name of file containing email addresses.  If not
+               		         specified,Deafault is infile.csv.
+  		-o FILE, --outfile=FILE
+                 	         Name of file to write bad addresses to.  If not
+                	         specified, Deafault is outfile.csv.
+                	         
+## Files format
+	- input file : is a CSV file, where each email address can be found in a separated line
+	- output file: is a CSV file, Contains the following fields:
+		email	: contains the email address that was rested.
+		is_valid: if True then email is valid.
+		is_free : if True, then the email can be found in file "email_providers_free.txt". i get the txt file from https://github.com/shanedevane/trusted-email-validator
+		is_diposable: if True, then the email can be found in file "email_providers_diposable.txt".
+		has_mx: if true then this domain has MX records.
+		mx_records : this contains the MX records of the domain.
+		
+## Please not that:
+	-  this script works with python2.x
+	-  all the requered .txt files should be i the same directory as the main.py file
+	-  the script should be executed as root
+	-  to run the script use "python mail.py"
